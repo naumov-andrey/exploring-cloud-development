@@ -1,0 +1,16 @@
+linters-settings:
+  lll:
+    line-length: 120
+linters:
+  disable-all: true
+  enable:
+    - errcheck
+    - gosimple
+    - govet
+    - gofmt
+    - goimports
+    - ineffassign
+    - staticcheck
+    - unused
+    - bodyclose
+    - lll
