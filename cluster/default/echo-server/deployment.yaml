@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: echo-server-deployment
+spec:
+  selector:
+    matchLabels:
+      app: echo-server
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: echo-server
+    spec:
+      containers:
+      - name: echo-server
+        image: naumovandrey/echo-server:v0.1.1
+        ports:
+        - containerPort: 8080
